@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const { cart, removeFromCart, updateQty, subtotal } = useCart();
@@ -57,6 +58,22 @@ export default function Cart() {
       ))}
 
       <h3 className="cart-total">Total: {subtotal.toFixed(2)} €</h3>
+
+      <div style={{ textAlign: "right", marginTop: "20px" }}>
+        <Link to="/checkout">
+          <button style={{ 
+            padding: "15px 30px", 
+            fontSize: "1.1rem", 
+            background: "#28a745", 
+            color: "white", 
+            border: "none", 
+            borderRadius: "8px", 
+            cursor: "pointer" 
+          }}>
+            Finalizar Compra ➔
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
