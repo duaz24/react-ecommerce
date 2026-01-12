@@ -7,4 +7,4 @@ export default function Shipping() {
       <p>Aqui ficam as informações sobre os métodos de envio...</p>
     </div>
   );
-}
+} 
