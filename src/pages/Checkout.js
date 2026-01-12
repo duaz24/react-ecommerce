@@ -13,7 +13,6 @@ export default function Checkout() {
     pagamento: "cartao"
   });
 
-  // Se o carrinho estiver vazio, redireciona ou mostra mensagem
   if (cart.length === 0) {
     return (
       <div className="container">
@@ -36,11 +35,10 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulação de processamento de pagamento
     alert(`Compra confirmada com sucesso!\nObrigado, ${formData.nome}.`);
     
-    clearCart(); // Limpa o carrinho
-    navigate("/"); // Redireciona para a Home
+    clearCart(); 
+    navigate("/"); 
   };
 
   return (
