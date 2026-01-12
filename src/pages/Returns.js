@@ -7,4 +7,4 @@ export default function Returns() {
       <p>A nossa política de devolução é...</p>
     </div>
   );
-}
+} 
