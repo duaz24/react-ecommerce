@@ -87,7 +87,7 @@ nav a:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   transition: 0.25s ease;
   cursor: pointer;
-  overflow: hidden; /* Garante que nada sai do card */
+  overflow: hidden;
 }
 
 .card:hover {
@@ -95,11 +95,11 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* CORREÇÃO DAS IMAGENS AQUI */
+/* IMAGENS AJUSTADAS */
 .card img {
   height: 200px;
-  width: 100%;         /* Ocupa a largura disponível do pai */
-  object-fit: contain; /* Ajusta a imagem sem cortar ou esticar */
+  width: 100%;
+  object-fit: contain;
   margin-bottom: 15px;
 }
 
@@ -174,12 +174,12 @@ button:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   display: flex;
   gap: 40px;
-  flex-wrap: wrap; /* Melhora responsividade em mobile */
+  flex-wrap: wrap;
 }
 
 .detail-left img {
   width: 350px;
-  max-width: 100%; /* Garante que não sai do ecrã em telemóveis */
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -490,4 +490,117 @@ main {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- LANDING PAGE STYLES --- */
+
+/* Hero Section com Imagem de Fundo */
+.hero {
+  height: 85vh;
+  background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1950&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px; /* Compensa a margem do main */
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: #007bff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  gap: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  margin-top: -50px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  max-width: 1000px;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.feature-item h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features {
+    margin-top: 20px;
+    box-shadow: none;
+    background: transparent;
+  }
+  
+  .feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
 }
