@@ -14,14 +14,15 @@ export default function Navbar() {
     <nav>
       <div className="navbar-container">
 
-        {/* NOME DA LOJA */}
+        {/* LOGO (Vai para a Landing Page) */}
         <div className="navbar-logo">
           <Link to="/">LuxItens</Link>
         </div>
 
         {/* LINKS */}
         <div className="navbar-links">
-          <Link to="/">Home</Link>
+          <Link to="/">Início</Link>
+          <Link to="/loja" style={{ fontWeight: "bold", color: "#007bff" }}>Loja</Link> {/* Novo Link */}
 
           <Link to="/cart">
             Carrinho
