@@ -285,3 +285,33 @@ body.dark-mode button {
   border: none;
   cursor: pointer;
 }
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cart-badge {
+  margin-left: 6px;
+  background: #007bff;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
