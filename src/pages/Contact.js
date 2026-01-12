@@ -7,4 +7,4 @@ export default function Contact() {
       <p>Entra em contacto connosco através do email...</p>
     </div>
   );
-}
+} 
