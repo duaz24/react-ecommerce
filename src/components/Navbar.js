@@ -12,12 +12,32 @@ export default function Navbar() {
 
   return (
     <nav>
-      <Link to="/">Loja</Link>
-      <Link to="/cart">Carrinho ({cart.length})</Link>
+      <div className="navbar-container">
 
-      <button className="dark-toggle" onClick={() => setDark(!dark)}>
-        {dark ? "☀️" : "🌙"}
-      </button>
+        {/* NOME DA LOJA */}
+        <div className="navbar-logo">
+          <Link to="/">LuxItens</Link>
+        </div>
+
+        {/* LINKS */}
+        <div className="navbar-links">
+          <Link to="/">Home</Link>
+
+          <Link to="/cart">
+            Carrinho
+            <span className="cart-badge">({cart.length})</span>
+          </Link>
+
+          <button
+            className="dark-toggle"
+            onClick={() => setDark(!dark)}
+            aria-label="Alternar modo escuro"
+          >
+            {dark ? "☀️" : "🌙"}
+          </button>
+        </div>
+
+      </div>
     </nav>
   );
 }
