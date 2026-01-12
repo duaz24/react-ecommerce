@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "react-hot-toast"; // <--- NOVO IMPORT
+import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -8,6 +8,11 @@ import LandingPage from "./pages/LandingPage";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+// --- NOVOS IMPORTS ---
+import Shipping from "./pages/Shipping";
+import Returns from "./pages/Returns";
+import Contact from "./pages/Contact";
+// ---------------------
 import { CartProvider } from "./context/CartContext";
 import { initScrollAnimations } from "./scrollAnimations";
 
@@ -18,7 +23,6 @@ export default function App() {
 
   return (
     <CartProvider>
-      {/* O Toaster fica aqui, visível em toda a app */}
       <Toaster 
         position="top-center" 
         reverseOrder={false} 
@@ -41,6 +45,13 @@ export default function App() {
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              
+              {/* --- NOVAS ROTAS --- */}
+              <Route path="/envios" element={<Shipping />} />
+              <Route path="/devolucoes" element={<Returns />} />
+              <Route path="/contactos" element={<Contact />} />
+              {/* ------------------- */}
+              
             </Routes>
           </div>
           <Footer />
