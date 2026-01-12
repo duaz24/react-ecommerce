@@ -16,18 +16,18 @@ export default function Footer() {
           <h4>Navegação</h4>
           <ul>
             <li><Link to="/">Início</Link></li>
-            <li><Link to="/">Produtos</Link></li>
+            <li><Link to="/loja">Produtos</Link></li> {/* Ajustei para /loja conforme as tuas rotas */}
             <li><Link to="/cart">Carrinho</Link></li>
           </ul>
         </div>
 
-        {/* Coluna 3: Apoio ao Cliente */}
+        {/* Coluna 3: Apoio ao Cliente (ATUALIZADO) */}
         <div className="footer-section">
           <h4>Ajuda</h4>
           <ul>
-            <li><a href="#">Envios e Entregas</a></li>
-            <li><a href="#">Trocas e Devoluções</a></li>
-            <li><a href="#">Contacta-nos</a></li>
+            <li><Link to="/envios">Envios e Entregas</Link></li>
+            <li><Link to="/devolucoes">Trocas e Devoluções</Link></li>
+            <li><Link to="/contactos">Contacta-nos</Link></li>
           </ul>
         </div>
 
