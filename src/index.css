@@ -314,4 +314,9 @@ body.dark-mode button {
   padding: 2px 8px;
   border-radius: 999px;
 }
+/* Espaçamento do conteúdo abaixo da navbar */
+main {
+  margin-top: 30px;
+}
+
 
