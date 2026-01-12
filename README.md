@@ -46,8 +46,10 @@ react-ecommerce/
 1. Clona o repositório:
    ```bash
    git clone https://github.com/duaz24/react-ecommerce.git
+   npm install react-hot-toast
    npm install
    npm start
+   
    
 ---
 
